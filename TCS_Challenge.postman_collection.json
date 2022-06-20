@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "ca7647a0-4ee0-40b8-be79-e80ddd69da5e",
+		"name": "TCS Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2661676"
+	},
+	"item": [
+		{
+			"name": "getTemperatureByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/location/search/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location",
+						"search",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getGeolocationByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/location/search/getGeolocationByName/London",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location",
+						"search",
+						"getGeolocationByName",
+						"London"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWeatherByCoords",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/location/search/lat/51.5073219/lon/-0.1276474",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"location",
+						"search",
+						"lat",
+						"51.5073219",
+						"lon",
+						"-0.1276474"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
