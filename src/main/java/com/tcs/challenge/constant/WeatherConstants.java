@@ -1,8 +1,11 @@
 package com.tcs.challenge.constant;
 
 public class WeatherConstants {
-
 	
+	private WeatherConstants() {
+		//
+	}
+
 	public static final String CODE_404 = "404";
 	public static final String CODE_400 = "400";
 	public static final String CODE_200 = "200";

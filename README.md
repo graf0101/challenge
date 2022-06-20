@@ -89,6 +89,7 @@ Sprinb-boot Reactive Rest API
 
 - Set controller interface messages as properties
 - Implement Security
+- Validatation on null responses from weather api
 
 ## Contact
 Created by francisco.graf@gmail.com

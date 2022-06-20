@@ -23,21 +23,20 @@ public class OpenWeatherMapClient {
 	@Autowired
 	@Setter
 	ApiWeatherProperties apiProps;
-
+// 	TODO Validate when reponse is empty or null 
 	public Mono<Geo> getGeolocationByName(String locationName) {
 		return WebClient.create(apiProps.getHost()).get()
-				.uri(uriBuilder -> buildGeoUri(locationName, apiProps.getLimit(), uriBuilder))
-				.exchangeToFlux(clientResponse -> clientResponse.bodyToFlux(Geo.class))
-				.elementAt(0)
+				.uri(uriBuilder -> buildGeoUri(locationName, apiProps.getLimit(), uriBuilder))				
+				.exchangeToFlux(clientResponse -> clientResponse.bodyToFlux(Geo.class)).next()
                 .log("Geo Fetched:");
 	}
-
+	
+// 	TODO Validate when reponse is empty or null
 	public Mono<Weather> getWeatherByCoordinates(String locationLat, String locationLon) {
 		return WebClient.create(apiProps.getHost()).get()
 				.uri(uriBuilder -> buildWeatherUri(locationLat, locationLon, apiProps.getUnit(), uriBuilder))
 				.exchangeToFlux(clientResponse -> clientResponse.bodyToFlux(Weather.class))
-				.filter(Objects::nonNull)
-				.elementAt(0).log("Weather Fetched  : ");
+				.next().log("Weather Fetched  : ");
 	}
 
 	private URI buildWeatherUri(String locationLat, String locationLon, String units, UriBuilder uriBuilder) {
