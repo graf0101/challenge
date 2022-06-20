@@ -12,5 +12,4 @@
     </root>
 
     <logger name="org.springframework.web" level="INFO" />
-    <logger name="com.droidablebee" level="DEBUG" />
 </configuration>
