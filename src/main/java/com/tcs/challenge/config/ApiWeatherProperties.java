@@ -19,4 +19,6 @@ public class ApiWeatherProperties {
 	private String limit;
 	private String lang;
 	private String unit;
+	private String pathGeo;
+	private String pathWeather;
 }
