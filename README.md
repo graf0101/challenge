@@ -79,6 +79,7 @@ Sprinb-boot Reactive Rest API
 - mvn clean install -Dapi-weather.key="API_WEATHER_KEY"
 - run: java -Dapi-weather.key="API_WEATHER_KEY" -jar target/spring-boot-rest-tcs-challenge.war
 
+In case of problem  with the key add api-weather.key="API_WEATHER_KEY" to the file api_weather.properties
 ## Usage
 
 - http://localhost:8080/swagger-ui/
