@@ -44,6 +44,11 @@ public class SwaggerConfiguration implements WebFluxConfigurer {
 		return new ApiInfoBuilder().title("API TCS").description("TCS Challenge").version("1.0").build();
 	}
 
+    /**
+     * How to configure springfox to unwrap reactive types such as Mono and Flux without having to explicitly specify response type in @ApiResponse
+     * @param resolver
+     * @return
+     */
     @Bean
     @Primary
     HandlerMethodResolver fluxMethodResolver(TypeResolver resolver) {
